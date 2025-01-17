@@ -1,1 +1,3 @@
 # InterviewInsight.AI
+
+A web app that uses AI to analyze facial expressions during interviews, providing real-time insights into emotions, stress, and confidence. It dynamically generates questions based on the interviewee’s profile and stores video and analysis data.
