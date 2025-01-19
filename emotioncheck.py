@@ -1,4 +1,5 @@
 import cv2
+from deepface import DeepFace
 
 face_classifier = cv2.CascadeClassifier()
 face_classifier.load(cv2.samples.findFile("haarcascade_frontalface_default.xml"))
@@ -8,8 +9,8 @@ while True:
     ret, frame = cap.read()
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_classifier.detectMultiScale(frame_gray)
-    # response = DeepFace(frame, actoin=("emotions"))
-    # print(response)
+    response = DeepFace(frame, actoin=("emotions"))
+    print(response)
     # Initialize new_frame with the original frame
     new_frame = frame.copy()
     
